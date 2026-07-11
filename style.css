@@ -134,13 +134,17 @@ color:white;
 }
 
 .btn:hover{
-transform:translateY(-5px);
+transform:translateY(-6px);
+box-shadow:0 15px 35px rgba(0,113,227,.35);
 }
 
-.btn2{
-border:2px solid #0071e3;
-color:#0071e3;
+.btn2:hover{
+background:#0071e3;
+color:#fff;
+transform:translateY(-6px);
+box-shadow:0 15px 35px rgba(0,113,227,.35);
 }
+
 
 .btn2:hover{
 background:#0071e3;
