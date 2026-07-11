@@ -340,3 +340,9 @@ transform:translateY(0);
 }
 
 }
+.project:hover,
+.card:hover{
+
+transform:translateY(-12px) scale(1.03);
+
+}
