@@ -1,262 +1,80 @@
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:'Poppins',sans-serif;
-scroll-behavior:smooth;
+// Smooth Scroll
+document.querySelectorAll('a[href^="#"]').forEach(anchor=>{
+anchor.addEventListener("click",function(e){
+e.preventDefault();
+
+const target=document.querySelector(this.getAttribute("href"));
+
+if(target){
+target.scrollIntoView({
+behavior:"smooth"
+});
 }
 
-body{
-background:#f5f5f7;
-color:#1d1d1f;
-}
+});
+});
 
-.navbar{
-position:fixed;
-top:0;
-left:0;
-width:100%;
-padding:18px 8%;
-display:flex;
-justify-content:space-between;
-align-items:center;
-background:rgba(255,255,255,.8);
-backdrop-filter:blur(15px);
-z-index:999;
-}
 
-.logo{
-width:55px;
-height:55px;
-border-radius:50%;
-background:#111;
-color:#fff;
-display:flex;
-justify-content:center;
-align-items:center;
-font-size:22px;
-font-weight:700;
-}
+// Navbar Shadow
 
-.navbar ul{
-display:flex;
-list-style:none;
-gap:30px;
-}
+window.addEventListener("scroll",()=>{
 
-.navbar ul a{
-text-decoration:none;
-color:#111;
-font-weight:600;
-transition:.3s;
-}
+const navbar=document.querySelector(".navbar");
 
-.navbar ul a:hover{
-color:#0071e3;
-}
+if(window.scrollY>50){
 
-.hero{
-min-height:100vh;
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:120px 10%;
-}
+navbar.style.boxShadow="0 10px 30px rgba(0,0,0,.1)";
 
-.hero-text{
-max-width:600px;
-}
+}else{
 
-.badge{
-display:inline-block;
-padding:8px 18px;
-background:#eaf8ef;
-color:#0a8f3d;
-border-radius:40px;
-margin-bottom:20px;
-font-size:14px;
-}
-
-.hero h1{
-font-size:70px;
-}
-
-.hero h2{
-font-size:30px;
-margin:15px 0;
-color:#555;
-}
-
-.hero p{
-font-size:18px;
-line-height:1.8;
-color:#666;
-margin-bottom:35px;
-}
-
-.circle{
-width:300px;
-height:300px;
-border-radius:50%;
-background:#111;
-display:flex;
-justify-content:center;
-align-items:center;
-color:#fff;
-font-size:90px;
-font-weight:700;
-box-shadow:0 20px 60px rgba(0,0,0,.25);
-}
-
-.buttons{
-display:flex;
-gap:20px;
-}
-
-.btn,
-.btn2{
-padding:15px 35px;
-border-radius:50px;
-text-decoration:none;
-font-weight:600;
-transition:.3s;
-}
-
-.btn{
-background:#0071e3;
-color:white;
-}
-
-.btn:hover{
-transform:translateY(-5px);
-}
-
-.btn2{
-border:2px solid #0071e3;
-color:#0071e3;
-}
-
-.btn2:hover{
-background:#0071e3;
-color:white;
-}
-
-section{
-padding:110px 10%;
-}
-
-h2{
-font-size:45px;
-margin-bottom:30px;
-text-align:center;
-}
-
-.about p{
-max-width:850px;
-margin:auto;
-text-align:center;
-line-height:1.8;
-font-size:18px;
-color:#666;
-}
-
-.service-grid,
-.portfolio-grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-gap:30px;
-margin-top:40px;
-}
-
-.card,
-.project{
-background:white;
-padding:35px;
-border-radius:25px;
-box-shadow:0 15px 40px rgba(0,0,0,.08);
-transition:.3s;
-}
-
-.card:hover,
-.project:hover{
-transform:translateY(-10px);
-}
-
-.skill{
-margin-bottom:25px;
-}
-
-.bar{
-height:12px;
-background:#ddd;
-border-radius:30px;
-overflow:hidden;
-}
-
-.fill{
-height:100%;
-background:#0071e3;
-}
-
-.contact{
-text-align:center;
-}
-
-.contact-buttons{
-display:flex;
-justify-content:center;
-gap:20px;
-margin-top:30px;
-}
-
-footer{
-background:#111;
-color:#fff;
-text-align:center;
-padding:40px;
-}
-
-.floating{
-position:fixed;
-right:25px;
-bottom:25px;
-width:60px;
-height:60px;
-background:#25D366;
-border-radius:50%;
-display:flex;
-justify-content:center;
-align-items:center;
-color:white;
-font-size:28px;
-text-decoration:none;
-box-shadow:0 10px 30px rgba(0,0,0,.3);
-}
-
-@media(max-width:900px){
-
-.hero{
-flex-direction:column;
-text-align:center;
-gap:60px;
-}
-
-.navbar ul{
-display:none;
-}
-
-.hero h1{
-font-size:50px;
-}
-
-.circle{
-width:220px;
-height:220px;
-font-size:70px;
-}
-
-.buttons{
-justify-content:center;
-}
+navbar.style.boxShadow="none";
 
 }
+
+});
+
+
+// Scroll Animation
+
+const observer=new IntersectionObserver((entries)=>{
+
+entries.forEach(entry=>{
+
+if(entry.isIntersecting){
+
+entry.target.classList.add("show");
+
+}
+
+});
+
+});
+
+document.querySelectorAll("section").forEach(section=>{
+
+section.classList.add("hidden");
+
+observer.observe(section);
+
+});
+
+
+// Hero Animation
+
+window.onload=()=>{
+
+const hero=document.querySelector(".hero-text");
+
+hero.style.opacity="0";
+hero.style.transform="translateY(50px)";
+
+setTimeout(()=>{
+
+hero.style.transition="1s";
+
+hero.style.opacity="1";
+hero.style.transform="translateY(0)";
+
+},300);
+
+};
