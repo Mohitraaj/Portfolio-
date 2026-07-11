@@ -61,7 +61,13 @@ display:flex;
 justify-content:space-between;
 align-items:center;
 padding:120px 10%;
+background:
+radial-gradient(circle at top right,#4facfe22,transparent 35%),
+radial-gradient(circle at bottom left,#00f2fe22,transparent 35%),
+linear-gradient(135deg,#ffffff,#f5f5f7);
+overflow:hidden;
 }
+
 
 .hero-text{
 max-width:600px;
