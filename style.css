@@ -346,3 +346,27 @@ transform:translateY(0);
 transform:translateY(-12px) scale(1.03);
 
 }
+#loader{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:#111;
+display:flex;
+justify-content:center;
+align-items:center;
+z-index:99999;
+transition:1s;
+}
+
+#loader h1{
+font-size:80px;
+color:#fff;
+letter-spacing:5px;
+}
+
+.loader-hide{
+opacity:0;
+visibility:hidden;
+}
