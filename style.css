@@ -244,3 +244,66 @@ height:100%;
 background:#0071e3;
 border-radius:30px;
 }
+/* Contact */
+
+.contact{
+padding:120px 10%;
+text-align:center;
+background:#fff;
+}
+
+.contact h2{
+font-size:48px;
+margin-bottom:20px;
+}
+
+.contact p{
+font-size:20px;
+color:#666;
+margin-bottom:40px;
+}
+
+.contact-buttons{
+display:flex;
+justify-content:center;
+gap:20px;
+flex-wrap:wrap;
+}
+
+/* Footer */
+
+footer{
+padding:40px;
+background:#111;
+color:#fff;
+text-align:center;
+}
+
+footer p{
+margin-top:10px;
+color:#aaa;
+}
+
+/* Floating WhatsApp */
+
+.floating{
+position:fixed;
+bottom:25px;
+right:25px;
+width:60px;
+height:60px;
+background:#25D366;
+color:#fff;
+display:flex;
+justify-content:center;
+align-items:center;
+border-radius:50%;
+font-size:30px;
+text-decoration:none;
+box-shadow:0 10px 30px rgba(0,0,0,.3);
+transition:.3s;
+}
+
+.floating:hover{
+transform:scale(1.1);
+}
