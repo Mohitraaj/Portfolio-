@@ -78,3 +78,20 @@ hero.style.transform="translateY(0)";
 },300);
 
 };
+const themeBtn = document.getElementById("theme-toggle");
+
+themeBtn.addEventListener("click",()=>{
+
+document.body.classList.toggle("dark-mode");
+
+if(document.body.classList.contains("dark-mode")){
+
+themeBtn.innerHTML="☀️";
+
+}else{
+
+themeBtn.innerHTML="🌙";
+
+}
+
+});
