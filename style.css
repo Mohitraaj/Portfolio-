@@ -269,3 +269,45 @@ justify-content:center;
 }
 
 }
+#theme-toggle{
+background:#111;
+color:#fff;
+border:none;
+padding:10px 15px;
+border-radius:50px;
+cursor:pointer;
+font-size:18px;
+transition:.3s;
+}
+
+#theme-toggle:hover{
+transform:scale(1.1);
+}
+
+.dark-mode{
+background:#111;
+color:#fff;
+}
+
+.dark-mode .card,
+.dark-mode .project{
+background:#1e1e1e;
+color:#fff;
+}
+
+.dark-mode .navbar{
+background:rgba(20,20,20,.85);
+}
+
+.dark-mode .about,
+.dark-mode .services,
+.dark-mode .portfolio,
+.dark-mode .skills,
+.dark-mode .contact{
+background:#111;
+color:#fff;
+}
+
+.dark-mode p{
+color:#ccc;
+}
