@@ -23,7 +23,8 @@ align-items:center;
 background:rgba(255,255,255,.8);
 backdrop-filter:blur(15px);
 z-index:999;
-
+border-bottom:1px solid rgba(255,255,255,.15);
+transition:.4s;
 }
 
 .logo{
