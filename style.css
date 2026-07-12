@@ -182,11 +182,16 @@ margin-top:40px;
 
 .card,
 .project{
-background:white;
-padding:35px;
-border-radius:25px;
-box-shadow:0 15px 40px rgba(0,0,0,.08);
-transition:.3s;
+overflow:hidden;
+}
+
+.project img{
+transition:.5s;
+}
+
+.project:hover img{
+transform:scale(1.1);
+
 }
 
 .card:hover,
