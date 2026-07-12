@@ -382,3 +382,15 @@ width:100%;
 border-radius:15px;
 margin-bottom:15px;
 }
+::-webkit-scrollbar{
+width:8px;
+}
+
+::-webkit-scrollbar-track{
+background:#eee;
+}
+
+::-webkit-scrollbar-thumb{
+background:#0071e3;
+border-radius:20px;
+}
